@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>BhashaGuruApi</name>
+    </assembly>
+    <members>
+        <member name="M:BhashaGuruApi.Controllers.CredentialController.Put(BhashaguruModel.ChangeCredential)">
+            <summary>
+            Change Password
+            </summary>
+            <param name="loginId"></param>
+            <param name="newPassword"></param>
+            <param name="oldpassword"></param>
+        </member>
+        <member name="M:BhashaGuruApi.Controllers.CredentialController.Put(BhashaguruModel.ForgetCredential)">
+            <summary>
+            forgetCredential
+            </summary>
+            <param name="forgetCredential"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BhashaGuruApi.Controllers.TopicController.GetTopicDetails">
+            <summary>
+            Get All the Topics Details
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:BhashaGuruApi.Controllers.TopicController.GetCardSet(System.String)">
+            <summary>
+            Get All the Topics Details
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:BhashaGuruApi.Controllers.UserController.Post(BhashaguruModel.RegisterUser)">
+            <summary>
+            Register a new user
+            </summary>
+            <param name="registerUser"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BhashaGuruApi.Controllers.UserController.Login(BhashaguruModel.LoginUser)">
+            <summary>
+            Perform user login
+            </summary>
+            <param name="loginUser"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,61 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29209.62
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BhashaGuruApi", "BhashaGuruApi.csproj", "{71881C4E-3B43-4ED6-9DD5-8AAEA6395EFC}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BhashaguruModel", "..\BhashaguruModel\BhashaguruModel.csproj", "{CEB75B36-96F5-44EB-ABA7-A29556EBEE7A}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BusinessLayerService", "..\BusinessLayerService\BusinessLayerService.csproj", "{35740403-13BF-4EDA-96E1-A06ADB87D1EA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RepositoryService", "..\RepositoryService\RepositoryService.csproj", "{B0218D31-2781-4CEB-81AC-CF591C630D88}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataStorage", "..\DataStorage\DataStorage.csproj", "{CF5149D9-BC5A-46E5-A29A-EC9C206D4AAD}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EmailSender", "..\EmailSender\EmailSender.csproj", "{433D8B39-D667-4DE2-98FC-811D76EAA275}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HelperComponent", "..\HelperComponent\HelperComponent.csproj", "{235B599F-8766-49C8-9826-47768D7E4EA0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{71881C4E-3B43-4ED6-9DD5-8AAEA6395EFC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{71881C4E-3B43-4ED6-9DD5-8AAEA6395EFC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{71881C4E-3B43-4ED6-9DD5-8AAEA6395EFC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{71881C4E-3B43-4ED6-9DD5-8AAEA6395EFC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CEB75B36-96F5-44EB-ABA7-A29556EBEE7A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CEB75B36-96F5-44EB-ABA7-A29556EBEE7A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CEB75B36-96F5-44EB-ABA7-A29556EBEE7A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CEB75B36-96F5-44EB-ABA7-A29556EBEE7A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{35740403-13BF-4EDA-96E1-A06ADB87D1EA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{35740403-13BF-4EDA-96E1-A06ADB87D1EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{35740403-13BF-4EDA-96E1-A06ADB87D1EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{35740403-13BF-4EDA-96E1-A06ADB87D1EA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B0218D31-2781-4CEB-81AC-CF591C630D88}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B0218D31-2781-4CEB-81AC-CF591C630D88}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B0218D31-2781-4CEB-81AC-CF591C630D88}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B0218D31-2781-4CEB-81AC-CF591C630D88}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CF5149D9-BC5A-46E5-A29A-EC9C206D4AAD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CF5149D9-BC5A-46E5-A29A-EC9C206D4AAD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CF5149D9-BC5A-46E5-A29A-EC9C206D4AAD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CF5149D9-BC5A-46E5-A29A-EC9C206D4AAD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{433D8B39-D667-4DE2-98FC-811D76EAA275}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{433D8B39-D667-4DE2-98FC-811D76EAA275}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{433D8B39-D667-4DE2-98FC-811D76EAA275}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{433D8B39-D667-4DE2-98FC-811D76EAA275}.Release|Any CPU.Build.0 = Release|Any CPU
+		{235B599F-8766-49C8-9826-47768D7E4EA0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{235B599F-8766-49C8-9826-47768D7E4EA0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{235B599F-8766-49C8-9826-47768D7E4EA0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{235B599F-8766-49C8-9826-47768D7E4EA0}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D8B022FE-5DC1-47AB-A8BA-8E8146BB3F76}
+	EndGlobalSection
+EndGlobal
