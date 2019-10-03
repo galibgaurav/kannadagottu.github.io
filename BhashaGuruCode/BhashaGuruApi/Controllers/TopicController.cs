@@ -25,17 +25,7 @@ namespace BhashaGuruApi.Controllers
         /// </summary>
         /// <returns></returns>
         [HttpGet]
-        public async Task<TopicDetail> GetTopicDetails()
-        {
-            TopicService topicService = new TopicService(_iconfiguration);
-            return await topicService.GetTopicDetails();
-        }
-
-        /// <summary>
-        /// Get All the Topics Details
-        /// </summary>
-        /// <returns></returns>
-        [HttpGet]
+        [Route("[action]")]
         public async Task<List<Card>> GetCardSet(string topicName)
         {
             TopicService topicService = new TopicService(_iconfiguration);
@@ -45,17 +35,18 @@ namespace BhashaGuruApi.Controllers
 
         // GET: api/Topic
         [HttpGet]
-        public IEnumerable<string> Get()
+        public async Task<TopicDetail> Get()
         {
-            return new string[] { "value1", "value2" };
+            TopicService topicService = new TopicService(_iconfiguration);
+            return await topicService.GetTopicDetails();
         }
 
         // GET: api/Topic/5
-        [HttpGet("{id}", Name = "Get")]
-        public string Get(int id)
-        {
-            return "value";
-        }
+        //[HttpGet("{id}", Name = "Get")]
+        //public string Get(int id)
+        //{
+        //    return "value";
+        //}
 
         // POST: api/Topic
         [HttpPost]

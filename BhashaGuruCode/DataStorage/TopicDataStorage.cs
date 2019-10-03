@@ -33,8 +33,18 @@ namespace DataStorage
                 // Create or reference an existing table
                 CloudTable table = await cmn.CreateTableAsync("topic");
                 TopicDetail topicDetail = new TopicDetail();
+
+                TableQuery<Topic> tableQuery = new TableQuery<Topic>().Where(
+                TableQuery.GenerateFilterCondition("PartitionKey", QueryComparisons.Equal, "BhashaGuru"));
+
+                //TableQuery<Topic> employeeQuery = new TableQuery<Topic>().Where(
+                //TableQuery.CombineFilters(
+                //TableQuery.GenerateFilterCondition("PartitionKey", QueryComparisons.Equal, partitionKey),
+                //TableOperators.And,
+                //TableQuery.GenerateFilterCondition("RowKey", QueryComparisons.LessThan, rowKey))); 
+
                 //retrives topic from the db
-                var topics = await DataStorageUtils.RetrieveEntitiesAsync(table);
+                var topics = await DataStorageUtils.ExecuteQueryAsync<Topic>(table, tableQuery);
                 topicDetail.topic = topics;
                 return topicDetail;
             }

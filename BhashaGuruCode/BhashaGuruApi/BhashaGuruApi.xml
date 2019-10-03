@@ -19,12 +19,6 @@
             <param name="forgetCredential"></param>
             <returns></returns>
         </member>
-        <member name="M:BhashaGuruApi.Controllers.TopicController.GetTopicDetails">
-            <summary>
-            Get All the Topics Details
-            </summary>
-            <returns></returns>
-        </member>
         <member name="M:BhashaGuruApi.Controllers.TopicController.GetCardSet(System.String)">
             <summary>
             Get All the Topics Details

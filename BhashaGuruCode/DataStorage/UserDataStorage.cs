@@ -142,6 +142,10 @@ namespace DataStorage
                 CloudTable table = await cmn.CreateTableAsync("user");
                 //check if older password exist
                 var exitingUser = await DataStorageUtils.RetrieveEntityUsingPointQueryAsync(table, "BhashaGuru", loginId);
+                if(exitingUser==null)
+                {
+                    return null;
+                }
                 var passwordHash = OneWayHash.Create(password);
                 bool isPasswordMatches = exitingUser.password.Equals(passwordHash);
                 if(isPasswordMatches)

@@ -4,7 +4,9 @@ using Microsoft.WindowsAzure.Storage.Table;
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
+
 
 namespace DataStorage
 {
@@ -131,27 +133,50 @@ namespace DataStorage
         /// </summary>
         /// <param name="table">Topic</param>
         /// <returns>ListOfEntities</returns>
-        public static async Task<List<T>> RetrieveEntitiesAsync<T>(CloudTable table) where T : ITableEntity, new ()
+        //public static async Task<List<T>> RetrieveEntitiesAsync<T>(CloudTable table) where T : ITableEntity, new ()
+        //{
+        //    try
+        //    {
+        //        List<Topic> topics = new List<Topic>();
+        //        TableQuery<T> tableQuery = new TableQuery<T>();
+        //        TableContinuationToken continuationToken = null;
+        //        do
+        //        {
+        //            var page = await table.ExecuteQuerySegmentedAsync(tableQuery, continuationToken);
+        //            continuationToken = page.ContinuationToken;
+        //            //topics.Add();
+        //        } while (continuationToken != null);
+
+        //        return topics;
+        //    }
+        //    catch (StorageException e)
+        //    {
+        //        throw e;
+        //    }
+        //}
+
+        public async static Task<IList<TElement>> ExecuteQueryAsync<TElement>(CloudTable cloudTable,TableQuery<TElement> tableQuery) where TElement:ITableEntity, new ()
         {
-            try
-            {
-                List<Topic> topics = new List<Topic>();
-                TableQuery<T> tableQuery = new TableQuery<T>();
-                TableContinuationToken continuationToken = null;
-                do
-                {
-                    var page = await table.ExecuteQuerySegmentedAsync(tableQuery, continuationToken);
-                    continuationToken = page.ContinuationToken;
-                    //topics.Add();
-                } while (continuationToken != null);
+            var nextQuery = tableQuery;
+            TableContinuationToken token = null;
+            var results = new List<TElement>();
 
-                return topics;
-            }
-            catch (StorageException e)
+            do
             {
-                throw e;
-            }
+                //Execute the next query segment async.
+                var queryResult = await cloudTable.ExecuteQuerySegmentedAsync<TElement>(tableQuery, token);
+
+                //Set exact results list capacity with result count.
+                results.Capacity += queryResult.Results.Count;
+
+                //Add segment results to results list.
+                results.AddRange(queryResult.Results);
+
+                token = queryResult.ContinuationToken;
+
+            } while (token != null);
+
+            return results;
         }
-
     }
 }

@@ -39,7 +39,7 @@ namespace BhashaguruModel
 
     public class TopicDetail
     {
-        public List<Topic> topic { get; set; }
+        public IList<Topic> topic { get; set; }
     }
 
     public class Card :TableEntity

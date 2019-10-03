@@ -97,7 +97,7 @@ namespace BhashaGuruApi.Controllers
                     {
                         Content = new StringContent(ApplicationMessage.LoginCreadentialNotCorrect)
                     };
-                    throw new System.Web.Http.HttpResponseException(error);
+                    return new System.Web.Http.HttpResponseException(error);
                 }
                 else
                 {
